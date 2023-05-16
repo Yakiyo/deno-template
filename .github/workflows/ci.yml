@@ -1,0 +1,26 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    name: Code quality check
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: vx.x.x
+
+      - name: Print deno version
+        run: deno --version
+
+      - name: Check format
+        run: deno fmt --check 
+
+      - name: Check lint
+        run: deno lint .
