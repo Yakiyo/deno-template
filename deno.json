@@ -1,0 +1,21 @@
+{
+	"lint": {
+		"files": {
+			"include": [
+				"./"
+			]
+		}
+	},
+	"fmt": {
+		"options": {
+			"useTabs": true,
+			"lineWidth": 70,
+			"singleQuote": true
+		}
+	},
+	"tasks": {
+		"fix": "deno fmt && deno lint",
+		"hooks": "deno run --allow-read --allow-write https://deno.land/x/deno_hooks@0.1.1/mod.ts install",
+		"prepare": "deno task hooks install"
+	}
+}
