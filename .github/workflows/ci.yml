@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    name: Code quality check
+    name: ci
 
     steps:
       - uses: actions/checkout@master
@@ -24,3 +24,6 @@ jobs:
 
       - name: Check lint
         run: deno lint .
+
+      #- name: Run tests
+      #  run: deno test .
