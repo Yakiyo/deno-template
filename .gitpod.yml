@@ -1,0 +1,9 @@
+image:
+    file: .devcontainer/.gitpod.Dockerfile
+
+tasks:
+  - init: 'deno task hooks'
+
+vscode:
+  extensions:
+    - denoland.vscode-deno
