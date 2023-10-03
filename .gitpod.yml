@@ -2,7 +2,7 @@ image:
     file: .devcontainer/.gitpod.Dockerfile
 
 tasks:
-  - init: 'deno task hooks'
+  - init: 'deno task hooks install'
 
 vscode:
   extensions:
